@@ -20,6 +20,9 @@ function paintToDo(newTodo) {
 
 
 function handleTodoSubmit(event) {
+    console.log(event.target.parentElement);
+    const li = event.target.parentElement;
+    li.remove();
     event.preventDefault();
     const newtodo = toDoinput.value;
     toDoInput.value ='';
@@ -27,3 +30,4 @@ function handleTodoSubmit(event) {
 }
 
 toDoForm.addEventListener('submit',handleTodoSubmit);
+handleTodoSubmit()
